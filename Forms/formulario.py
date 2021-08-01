@@ -161,7 +161,7 @@ Checkbutton(frame, text="Java", variable=lenguageJava, onvalue=1, offvalue=0, co
 Checkbutton(frame, text="Python", variable=lenguageP, onvalue=1, offvalue=0, command=toggleLanguage).grid(row=5, column=1, sticky=W)
 Checkbutton(frame, text="Javascript", variable=lenguageJS, onvalue=1, offvalue=0, command=toggleLanguage).grid(row=5, column=2, sticky=W)
 
-button = Button(frame, text="Enviar", width=20, command=lambda:send())
+button = Button(frame, text="Submit", width=20, command=lambda:send())
 button.grid(row=6,column=1)
 button.config(bg="gray", fg="black")
 
