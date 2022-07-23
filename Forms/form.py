@@ -130,7 +130,7 @@ def insertTable():
 frame = Frame(root, width=400, height=600)
 frame.pack()
 
-image = PhotoImage(file=r"Python.png").subsample(12, 12)
+image = PhotoImage(file="forms/python.png").subsample(12, 12)
 
 titulo = Label(frame, text="Survey developed with: ")
 titulo.grid(row=0, column=0, pady=10, padx=10)
