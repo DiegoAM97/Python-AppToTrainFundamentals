@@ -154,6 +154,7 @@ lastNameE.grid(row=2, column=1, pady=10, padx=10)
 
 Radiobutton(frame, text="Male", variable=gender, value=1, command=toggleGender).grid(row=3, column=1, sticky=W)
 Radiobutton(frame, text="Female", variable=gender, value=2, command=toggleGender).grid(row=3, column=2, sticky=W)
+Radiobutton(frame, text="Other", variable=gender, value=3, command=toggleGender).grid(row=3, column=3, sticky=W)
 
 Checkbutton(frame, text="C#", variable=lenguageCsharp, onvalue=1, offvalue=0, command=toggleLanguage).grid(row=4, column=1, sticky=W)
 Checkbutton(frame, text="R", variable=lenguageR, onvalue=1, offvalue=0, command=toggleLanguage).grid(row=4, column=2, sticky=W)
