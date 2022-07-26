@@ -26,14 +26,14 @@ def exit():
 def toggleGender():
 
     global selected
+    selected = True
 
     if gender.get() == 1:
-        selected = True
         return "Male"
-
     elif gender.get() == 2:
-        selected = True
         return "Female"
+    else:
+        return "Other"
 
 
 def toggleLanguage():
@@ -52,8 +52,6 @@ def toggleLanguage():
 
 
 def send():
-
-    global selected
 
     if selected and len(nameValue.get())>0 and len(lastNameValue.get())>0:
 
