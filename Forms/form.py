@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import pymysql
+import pymysql as sql
 
 root = Tk()
 root.title("Beta survey")
@@ -89,13 +89,13 @@ def conectDB():
         messagebox.showwarning("Database","The database already exists")
 
 def createDatabase():
-    connection = pymysql.connect(host="localhost", port=3306, user="root", password="root", charset="utf8")
+    connection = sql.connect(host="localhost", port=3306, user="root", password="root", charset="utf8")
     cursor = connection.cursor()
     cursor.execute("CREATE DATABASE SurveyAppDatabase")
     connection.close()
 
 def createTable():
-    connection = pymysql.connect(host="localhost", port=3306, user="root", password="root", db="SurveyAppDatabase", charset="utf8")
+    connection = sql.connect(host="localhost", port=3306, user="root", password="root", db="SurveyAppDatabase", charset="utf8")
     cursor = connection.cursor()
     cursor.execute("""CREATE TABLE Survey(
                                 ID INTEGER AUTO_INCREMENT PRIMARY KEY,
@@ -111,7 +111,7 @@ def createTable():
     connection.close()
 
 def insertTable():
-    connection = pymysql.connect(host="localhost", port=3306, user="root", password="root", db="SurveyAppDatabase", charset="utf8")
+    connection = sql.connect(host="localhost", port=3306, user="root", password="root", db="SurveyAppDatabase", charset="utf8")
     cursor = connection.cursor()
     cursor.execute("""INSERT INTO 
                     Survey (Name, LastName, Gender, Csharp, R, Java, Python, JavaScript) 
@@ -128,7 +128,7 @@ def insertTable():
 frame = Frame(root, width=400, height=600)
 frame.pack()
 
-image = PhotoImage(file="Python-AppToTrainFundamentals\Forms\Python.png").subsample(12, 12)
+image = PhotoImage(file="Forms\Python.png").subsample(12, 12)
 
 titulo = Label(frame, text="Survey developed with: ")
 titulo.grid(row=0, column=0, pady=10, padx=10)
